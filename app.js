@@ -50,4 +50,30 @@ function findMissingNo(arr){
 //  Guaranteed Conditions:
 //    - The array has at least 3 numbers
 //    - There are no repeated numbers
-// -----------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
+
+// 3. Write a function called antiCaps, which accepts a string and manipulates it as follows.
+// Uppercase characters will become lowercase.
+// Lowercase characters will become uppercase.
+
+//Extra credit
+// Have the function return double letters if originally uppercase
+// Have the function return the letter and a symbol if originally lowercase.
+
+function antiCaps(str){
+    const arr = str.split('')
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === arr[i].toUpperCase()){
+            arr[i] = arr[i].toLowerCase() + arr[i].toLowerCase()
+        } else if(arr[i] === arr[i].toLowerCase()){
+            arr[i] = arr[i].toUpperCase() + '$'
+        }
+    }
+    return arr.join('')
+}
+
+console.log(antiCaps('heLLO'))
+console.log(antiCaps('racEcar'))
+console.log(antiCaps('bAnAnA'))
+
+// ---------------------------------------------------------------------------------------------
