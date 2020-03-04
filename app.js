@@ -117,3 +117,32 @@ function multTable(x, y){
 console.log(multTable(10, 10))
 
 // -----------------------------------------------------------------------------------------------
+
+// 6. Given an array of numbers, create a function which returns the same array but with each 
+// element's index in the array added to itself. This means you add 0 to the number at index 0, 
+// add 1 to the number at index 1, etc...
+
+function addIndexes(arr) {
+	for(let i = 0; i + 1 < arr.length + 1; i++){
+       arr[i] = arr[i] + i
+    } 
+    return arr
+}
+
+
+// Or if you wanted a pure function that doesn't alter 'arr'
+
+// function addIndexes(arr){
+//     const newArr = []
+//     for(let i = 0; i + 1 < arr.length + 1; i++){
+//         newArr.push(arr[i] + i)
+//     }
+//     return newArr
+// }
+
+console.log(addIndexes([0, 0, 0, 0, 0]))
+console.log(addIndexes([1, 2, 3, 4, 5]))
+console.log(addIndexes([5, 4, 3, 2, 1]))
+
+// -----------------------------------------------------------------------------------------------
+
