@@ -66,7 +66,7 @@ function antiCaps(str){
         if(arr[i] === arr[i].toUpperCase()){
             arr[i] = arr[i].toLowerCase() + arr[i].toLowerCase()
         } else {
-            arr[i] = arr[i].toUpperCase() + '$'
+            arr[i] = arr[i].toUpperCase() + '*'
         }
     }
     return arr.join('')
@@ -77,3 +77,23 @@ console.log(antiCaps('racEcar'))
 console.log(antiCaps('bAnAnA'))
 
 // ---------------------------------------------------------------------------------------------
+
+// Write a function that accepts a string as an argument and returns true if the string is a 
+//palindrome (the string is the same forward and backward), or false if it is not.
+
+// A string is still considered a palindrome despite letter capitalization, spaces, or punctuation.
+
+function isPalindrome(str){
+    const arr = str.split('')
+    const newArr = arr.reverse()
+    const newStr = newArr.join('')
+
+    if(str === newStr){
+        return str + " is a palindrome!!"
+    } else {
+        return "Sorry, buster. " + str + " is not a palindrome. :("
+    }
+}
+console.log(isPalindrome("star rats"));  // true
+console.log(isPalindrome("palindrome"));  // false
+console.log(isPalindrome("racecar"));  // true
