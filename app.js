@@ -78,7 +78,7 @@ console.log(antiCaps('bAnAnA'))
 
 // ---------------------------------------------------------------------------------------------
 
-// Write a function that accepts a string as an argument and returns true if the string is a 
+// 4. Write a function that accepts a string as an argument and returns true if the string is a 
 //palindrome (the string is the same forward and backward), or false if it is not.
 
 // A string is still considered a palindrome despite letter capitalization, spaces, or punctuation.
@@ -97,3 +97,23 @@ function isPalindrome(str){
 console.log(isPalindrome("star rats"));  // true
 console.log(isPalindrome("palindrome"));  // false
 console.log(isPalindrome("racecar"));  // true
+
+// -----------------------------------------------------------------------------------------------
+
+// 5. Write a function that returns a 10 X 10 multiplication table (2D array).
+
+function multTable(x, y){
+    const table = []
+
+    for(let i = 1; i < x + 1; i++){
+        const newArr = []
+        table.push(newArr)
+        for(let j = 1; j < y + 1; j++){
+            newArr.push(j * i)
+        }
+    }
+    return table
+}
+console.log(multTable(10, 10))
+
+// -----------------------------------------------------------------------------------------------
