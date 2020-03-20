@@ -148,6 +148,9 @@ console.log(addIndexes([5, 4, 3, 2, 1]));
 
 // -----------------------------------------------------------------------------------------------
 
+// 7. Find repeat words in a string to find a hidden
+// message.
+
 function matchingWords(str) {
   let initArr = str.split(" ");
   const repeatWords = [];
@@ -172,4 +175,34 @@ console.log(
   )
 );
 
+// -------------------------------------------------------------------------------------------------
+
+// 8. FizzBuzz
+
+for(let i = 1; i <= 100; i++){
+  if(i % 15 === 0){
+    console.log('fizzbuzz')
+  } else if(i % 3 === 0){
+    console.log('fizz')
+  } else if(i % 5 === 0){
+    console.log('buzz')
+  } else {
+    console.log(i)
+  }
+}
+
+// -----------------------------------------------------------------------------------------------
+
+// 10. Fibonacci sequence
+
+function fib(n){
+  let arr = [0, 1];
+  for (let i = 2; i < n + 1; i++){
+    arr.push(arr[i - 2] + arr[i -1])
+  }
+  let real = n + 1
+ return arr[n] + ` is the number at the ${n}th index of your array, making it the ${real}th number in the Fibonacci Sequence.`
+}
+
+console.log(fib(7))
 // -------------------------------------------------------------------------------------------------
