@@ -193,16 +193,43 @@ for(let i = 1; i <= 100; i++){
 
 // -----------------------------------------------------------------------------------------------
 
-// 10. Fibonacci sequence
+// 9. Fibonacci sequence
 
 function fib(n){
   let arr = [0, 1];
-  for (let i = 2; i < n + 1; i++){
+  for (let i = 2; i <= n; i++){
     arr.push(arr[i - 2] + arr[i -1])
   }
   let real = n + 1
- return arr[n] + ` is the number at the ${n}th index of your array, making it the ${real}th number in the Fibonacci Sequence.`
+ return arr[n]
 }
 
-console.log(fib(7))
+console.log(fib(3))
 // -------------------------------------------------------------------------------------------------
+
+// 10. Create a function that takes a string, checks if it has the same number of x's and o's
+// and returns either true or false. Case insensitive and true if no x's or o's.
+
+function XO(str) {
+	let xCount = 0
+	let oCount = 0
+	let newStr = str.toLowerCase()
+	
+	for(let i = 0; i < newStr.length; i++){
+		if(newStr[i] === 'x'){
+			xCount++
+		} else if(newStr[i] === 'o'){
+			oCount++
+		}
+	}
+	if(xCount === oCount){
+		return true
+	} else {
+		return false
+	}
+}
+
+console.log(XO("ooxx"))
+console.log(XO("xooxx"))
+console.log(XO("ooxXm"))
+console.log(XO("zpzpzpp"))
