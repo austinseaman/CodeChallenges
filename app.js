@@ -1,6 +1,6 @@
 // 1. Re-write the .map() function
 
-Array.prototype.mapV2 = function(callback) {
+Array.prototype.mapV2 = function (callback) {
   const newArr = [];
 
   for (let i = 0; i < this.length; i++) {
@@ -37,7 +37,7 @@ console.log(mappedJsx);
 // 2. Write a function that takes an unsorted array as a parameter, and returns the missing number.
 
 function findMissingNo(arr) {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     return a - b;
   });
 
@@ -179,12 +179,12 @@ console.log(
 
 // 8. FizzBuzz
 
-for(let i = 1; i <= 100; i++){
-  if(i % 15 === 0){
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 === 0) {
     console.log('fizzbuzz')
-  } else if(i % 3 === 0){
+  } else if (i % 3 === 0) {
     console.log('fizz')
-  } else if(i % 5 === 0){
+  } else if (i % 5 === 0) {
     console.log('buzz')
   } else {
     console.log(i)
@@ -195,13 +195,13 @@ for(let i = 1; i <= 100; i++){
 
 // 9. Fibonacci sequence
 
-function fib(n){
+function fib(n) {
   let arr = [0, 1];
-  for (let i = 2; i <= n; i++){
-    arr.push(arr[i - 2] + arr[i -1])
+  for (let i = 2; i <= n; i++) {
+    arr.push(arr[i - 2] + arr[i - 1])
   }
   let real = n + 1
- return arr[n]
+  return arr[n]
 }
 
 console.log(fib(3))
@@ -211,25 +211,49 @@ console.log(fib(3))
 // and returns either true or false. Case insensitive and true if no x's or o's.
 
 function XO(str) {
-	let xCount = 0
-	let oCount = 0
-	let newStr = str.toLowerCase()
-	
-	for(let i = 0; i < newStr.length; i++){
-		if(newStr[i] === 'x'){
-			xCount++
-		} else if(newStr[i] === 'o'){
-			oCount++
-		}
-	}
-	if(xCount === oCount){
-		return true
-	} else {
-		return false
-	}
+  let xCount = 0
+  let oCount = 0
+  let newStr = str.toLowerCase()
+
+  for (let i = 0; i < newStr.length; i++) {
+    if (newStr[i] === 'x') {
+      xCount++
+    } else if (newStr[i] === 'o') {
+      oCount++
+    }
+  }
+  if (xCount === oCount) {
+    return true
+  } else {
+    return false
+  }
 }
 
 console.log(XO("ooxx"))
 console.log(XO("xooxx"))
 console.log(XO("ooxXm"))
 console.log(XO("zpzpzpp"))
+
+// --------------------------------------------------------------------------------------------------
+
+// 11. Forception
+// Output: ["Jon:", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Jacob:", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Jingle:", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Heimer:", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Schmidt:", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+
+let people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+function forception(ppl, alpha) {
+  const newArr = []
+  let alphs = alpha.toUpperCase().split('')
+
+  for (let i = 0; i < ppl.length; i++) {
+    newArr.push(ppl[i])
+    for (let j = 1; j > alphs.length; j++) {
+      newArr.push("hi")
+    }
+  }
+  return newArr
+}
+
+console.log(forception(people, alphabet))
