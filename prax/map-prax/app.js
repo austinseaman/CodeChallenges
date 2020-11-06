@@ -53,13 +53,7 @@ function doubleNumbers(arr){
   // ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
 
   function makeStrings(arr){
-    return arr.map(obj => {
-        if(obj.age >= 18){
-            return `${obj.name} can see The Matrix!`
-        } else {
-            return `${obj.name} cannot see The Matrix. Much baby!`
-        }
-    })
+    return arr.map(obj => obj.age >= 18 ? `${obj.name} can see The Matrix!` : `${obj.name} cannot see The Matrix. Much baby!`)
   }
   
   console.log(makeStrings([
