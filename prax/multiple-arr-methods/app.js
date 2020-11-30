@@ -91,3 +91,14 @@ people in another array.
 Remove the second individual from the array.
 Return the array in reverse order. 
 */
+
+// function lettersWithStrings(arr, char) {
+//     let newArr = []
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i].includes(char)){
+//             newArr.push(arr[i])
+//         }
+//     }
+//     return newArr
+// }
+// console.log(lettersWithStrings(["#3", "$$$", "C%4!", "Hey!"], "!")) // => ["C%4!", "Hey!"]
