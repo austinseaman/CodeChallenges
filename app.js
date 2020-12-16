@@ -248,9 +248,9 @@ function forception(ppl, alpha) {
   let alphs = alpha.toUpperCase().split('')
 
   for (let i = 0; i < ppl.length; i++) {
-    newArr.push(ppl[i])
-    for (let j = 1; j > alphs.length; j++) {
-      newArr.push("hi")
+    newArr.push(`${ppl[i]}:`)
+    for (let j = 0; j < alphs.length; j++) {
+      newArr.push(alphs[j])
     }
   }
   return newArr
