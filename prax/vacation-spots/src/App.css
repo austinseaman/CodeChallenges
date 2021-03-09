@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+.App {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 8px;
+  justify-content: center;
+}
+
+.place-card {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+}

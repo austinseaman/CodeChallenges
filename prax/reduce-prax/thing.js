@@ -1,0 +1,1 @@
+const leftMessages = document.getElementsByClassName("left")

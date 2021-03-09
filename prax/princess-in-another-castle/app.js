@@ -88,3 +88,46 @@ function randomRun() {
         clearInterval(id)
     }
 }
+
+
+// gameActive should be part of your constructor. almost everything will be part of your constructor, including your
+// setName, gotHit, getPowerUp, addCoin, and print methods. i see what you're trying to do with your setName method,
+// but after you move it to your player constructor, i would just use Math.random. Math.random just returns a random digit
+// between 0 and 1, so you could say if the digit is less than .5, set the name to Mario, otherwise, set the name to Luigi. if 
+// you're familiar with ternary statements, you can do this all on 1 line of code, or you can just use a simple if statement.
+//
+// for your gotHit method, you won't be doing anything with arrays, you can just create an if/else statement for what happens
+// when you get hit, based on whether or not you have a star. if the player has a star, make it say something like "the star protected you!",
+// otherwise, depending on the player's status property, you set up a switch statement to determine what happens to the status next.
+// something like this
+
+// else {
+//     switch(this.status) {
+//         case "current status":
+//             this.status = "new status"
+//             break
+//         case "current status":
+//             this.status = "new status"
+//             break
+//         case "curent status":
+//             this.status = "this will be the one where player dies"
+//             change the 'gameActive' boolean
+//             console.log(`You lost!`)
+//             break
+//         default:
+//             break
+//     }
+// }
+
+// have the this.status property start off as 'Small' in the constructor.
+//
+// use another switch statement for your gotPowerUp func. it will look nearly identical to the gotHit func's switch statement, except in the last case, 
+// you'll change the hasStar boolean and console.log() something to denote that you got a power up.
+
+// for your addCoin method, you can just increment the totalCoins by 1.
+// the print method should just be printing the player name, status, and totalCoins, as well as check for whether or not you have a star (and say so),
+// and what your final score was if the game is not active. (ps. final score should be totalCoins).
+
+// remember all of the above logic is part of your constructor.
+
+// let's build out the constructor in total, and the we can move on to the interval and random run function.
