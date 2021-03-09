@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+*, body {
+  margin: 0;
+  background-color: aquamarine;
+}
+.App {
+  text-align: center;
+}
+h1 {
+  font-family: 'Fascinate', cursive;
+}
+.header-text {
+  font-size: 69px;
+}
