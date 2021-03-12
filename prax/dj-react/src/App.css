@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body {
+  background-color: black;
+  background-image: url("https://cdn.wallpapersafari.com/42/74/zqWGdo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'DotGothic16', sans-serif;
+}
+.mixer {
+  text-align: center;
+  color: white;
+  font-size: 44px;
+  font-weight: bolder;
+}
